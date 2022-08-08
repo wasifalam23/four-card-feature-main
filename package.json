@@ -1,0 +1,14 @@
+{
+  "name": "four-card-feature-section",
+  "version": "1.0.0",
+  "description": "practicing css grid",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/style.scss css/style.css"
+  },
+  "author": "wasif alam",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.54.3"
+  }
+}
