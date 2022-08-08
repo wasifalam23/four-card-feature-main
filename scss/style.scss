@@ -1,0 +1,120 @@
+// Color Variables
+$color-primary-red: #ea5353;
+$color-primary-cyan: #45d3d3;
+$color-primary-orange: #fcaf4a;
+$color-primary-blue: #549ef2;
+
+$color-neutral-dark-blue: #4c4e61;
+$color-neutral-gray-blue: #a3a5ae;
+$color-neutral-light-gray: #fafafa;
+
+$color-white: #fff;
+
+// Font Variables
+$font-bold: 700;
+$font-semibold: 600;
+$font-medium: 500;
+$font-regular: 400;
+$font-light: 300;
+$font-extra-light: 200;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+.main-container {
+  max-width: 144rem;
+  margin: 15rem auto;
+  padding: 0 3.2rem;
+}
+
+.container {
+  background-color: $color-neutral-light-gray;
+  padding: 4rem;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+// Header
+.card {
+  &__header {
+    text-align: center;
+  }
+
+  &__heading--thin {
+    font-size: 3.6rem;
+    font-weight: $font-extra-light;
+    color: $color-neutral-dark-blue;
+  }
+
+  &__heading--bold {
+    font-weight: $font-semibold;
+    font-size: 3.6rem;
+    line-height: 1.7;
+    color: $color-neutral-dark-blue;
+  }
+
+  &__header--info {
+    font-size: 1.8rem;
+    color: $color-neutral-gray-blue;
+    margin-top: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+// Card
+.card__card {
+  &--section {
+    margin-top: 4.8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--container {
+    background-color: $color-white;
+    box-shadow: 1px 5px 10px 2px rgb(0 0 0 / 5%);
+    border-radius: 5px;
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5.2rem;
+    border-top: 5px solid $color-primary-cyan;
+  }
+
+  &--header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  &--heading {
+    font-size: 2.2rem;
+    font-weight: $font-semibold;
+    color: $color-neutral-dark-blue;
+  }
+
+  &--para {
+    font-size: 1.4rem;
+    color: $color-neutral-gray-blue;
+    line-height: 1.4;
+  }
+
+  &--footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
