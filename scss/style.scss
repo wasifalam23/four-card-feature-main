@@ -34,6 +34,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1;
+  background-color: $color-neutral-light-gray;
 }
 
 .main-container {
@@ -43,9 +44,7 @@ body {
 }
 
 .container {
-  background-color: $color-neutral-light-gray;
   padding: 4rem;
-  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 
