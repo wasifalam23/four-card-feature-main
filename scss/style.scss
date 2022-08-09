@@ -21,6 +21,9 @@ $font-extra-light: 200;
 // Breakpoints
 $bp-largest: 75em; // 1200px
 $bp-large: 60em; // 960px
+$bp-medium: 44em; // 704px
+$bp-small: 34em; // 544px
+$bp-smaller: 24em; // 376px
 
 *,
 *::before,
@@ -35,7 +38,11 @@ html {
   font-size: 62.5%;
 
   @media screen and (max-width: $bp-largest) {
-    font-size: 56.25%;
+    font-size: 56.25%; // 9px
+  }
+
+  @media screen and (max-width: $bp-medium) {
+    font-size: 50%; // 8px
   }
 }
 
@@ -49,25 +56,38 @@ body {
   max-width: 144rem;
   margin: 10rem auto;
   padding: 0 4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    margin-top: 7rem;
+    padding: 0 3.2rem;
+  }
 }
 
 // Header
 .card {
   &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  &__heading--thin {
+  &__heading--thin,
+  &__heading--bold {
     font-size: 4rem;
-    font-weight: $font-extra-light;
     color: $color-neutral-dark-blue;
+    @media screen and (max-width: $bp-small) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__heading--thin {
+    font-weight: $font-extra-light;
   }
 
   &__heading--bold {
     font-weight: $font-semibold;
-    font-size: 4rem;
     line-height: 1.7;
-    color: $color-neutral-dark-blue;
 
     @media screen and (max-width: $bp-largest) {
       line-height: 1.5;
@@ -79,10 +99,19 @@ body {
     color: $color-neutral-gray-blue;
     margin-top: 1.6rem;
     line-height: 1.5;
+    width: 48%;
 
     @media screen and (max-width: $bp-largest) {
       margin-top: 1.4rem;
       font-size: 1.6rem;
+    }
+
+    @media screen and (max-width: $bp-large) {
+      width: 65%;
+    }
+
+    @media screen and (max-width: $bp-small) {
+      width: 100%;
     }
   }
 }
@@ -116,8 +145,34 @@ body {
         'karma calc'
         '.     calc';
     }
+
+    @media screen and (max-width: $bp-medium) {
+      padding: 0 6.4rem;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        'visor visor  visor visor visor .'
+        ' . team team team team team '
+        ' karma karma karma karma karma .'
+        '. calc calc calc calc calc';
+    }
+
+    @media screen and (max-width: $bp-small) {
+      margin-top: 3.2rem;
+      padding: 1rem;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'visor'
+        'team'
+        'karma'
+        'calc';
+    }
+
+    @media screen and (max-width: $bp-smaller) {
+      padding: 0;
+    }
   }
 
+  // Card Container
   &--container {
     background-color: $color-white;
     box-shadow: 1px 5px 10px 2px rgb(0 0 0 / 5%);
@@ -130,6 +185,10 @@ body {
     @media screen and (max-width: $bp-largest) {
       gap: 4rem;
       padding: 2.4rem;
+    }
+
+    @media screen and (max-width: $bp-small) {
+      gap: 5rem;
     }
   }
 
@@ -177,6 +236,10 @@ body {
     @media screen and (max-width: $bp-largest) {
       line-height: 1.3;
       font-size: 1.3rem;
+    }
+
+    @media screen and (max-width: $bp-medium) {
+      font-size: 1.4rem;
     }
   }
 

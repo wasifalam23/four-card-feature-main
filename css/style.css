@@ -15,6 +15,11 @@ html {
     font-size: 56.25%;
   }
 }
+@media screen and (max-width: 44em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -27,20 +32,34 @@ body {
   margin: 10rem auto;
   padding: 0 4rem;
 }
+@media only screen and (max-width: 34em) {
+  .main-container {
+    margin-top: 7rem;
+    padding: 0 3.2rem;
+  }
+}
 
 .card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
-.card__heading--thin {
+.card__heading--thin, .card__heading--bold {
   font-size: 4rem;
-  font-weight: 200;
   color: #4c4e61;
+}
+@media screen and (max-width: 34em) {
+  .card__heading--thin, .card__heading--bold {
+    font-size: 3.2rem;
+  }
+}
+.card__heading--thin {
+  font-weight: 200;
 }
 .card__heading--bold {
   font-weight: 600;
-  font-size: 4rem;
   line-height: 1.7;
-  color: #4c4e61;
 }
 @media screen and (max-width: 75em) {
   .card__heading--bold {
@@ -52,11 +71,22 @@ body {
   color: #a3a5ae;
   margin-top: 1.6rem;
   line-height: 1.5;
+  width: 48%;
 }
 @media screen and (max-width: 75em) {
   .card__header--info {
     margin-top: 1.4rem;
     font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 60em) {
+  .card__header--info {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 34em) {
+  .card__header--info {
+    width: 100%;
   }
 }
 
@@ -80,6 +110,26 @@ body {
     grid-template-areas: "visor ." "visor team" "karma team" "karma calc" ".     calc";
   }
 }
+@media screen and (max-width: 44em) {
+  .card__card--section {
+    padding: 0 6.4rem;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "visor visor  visor visor visor ." " . team team team team team " " karma karma karma karma karma ." ". calc calc calc calc calc";
+  }
+}
+@media screen and (max-width: 34em) {
+  .card__card--section {
+    margin-top: 3.2rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "visor" "team" "karma" "calc";
+  }
+}
+@media screen and (max-width: 24em) {
+  .card__card--section {
+    padding: 0;
+  }
+}
 .card__card--container {
   background-color: #fff;
   box-shadow: 1px 5px 10px 2px rgba(0, 0, 0, 0.05);
@@ -93,6 +143,11 @@ body {
   .card__card--container {
     gap: 4rem;
     padding: 2.4rem;
+  }
+}
+@media screen and (max-width: 34em) {
+  .card__card--container {
+    gap: 5rem;
   }
 }
 .card__card--container__supervisor {
@@ -135,6 +190,11 @@ body {
   .card__card--para {
     line-height: 1.3;
     font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 44em) {
+  .card__card--para {
+    font-size: 1.4rem;
   }
 }
 .card__card--footer {
