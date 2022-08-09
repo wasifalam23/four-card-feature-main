@@ -24,7 +24,7 @@ body {
 
 .main-container {
   max-width: 144rem;
-  margin: 6.4rem auto;
+  margin: 10rem auto;
   padding: 0 4rem;
 }
 
@@ -70,8 +70,14 @@ body {
 }
 @media screen and (max-width: 75em) {
   .card__card--section {
-    margin-top: 4.8rem;
+    margin-top: 5rem;
     gap: 2.8rem;
+  }
+}
+@media screen and (max-width: 60em) {
+  .card__card--section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "visor ." "visor team" "karma team" "karma calc" ".     calc";
   }
 }
 .card__card--container {
